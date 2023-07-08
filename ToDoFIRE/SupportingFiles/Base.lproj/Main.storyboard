@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFIRE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,9 +112,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="dst-El-fsw" id="cZH-bB-Vet"/>
-                        <outlet property="passwordTextField" destination="hCx-pm-XI9" id="Sst-kL-V1a"/>
-                        <outlet property="warnLabel" destination="gBc-K3-uqj" id="FKs-zL-qAf"/>
+                        <outlet property="emailTextField" destination="dst-El-fsw" id="g36-9p-TwT"/>
+                        <outlet property="passwordTextField" destination="hCx-pm-XI9" id="k6B-eC-WhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,7 +123,7 @@
         <!--Tasks-->
         <scene sceneID="0sm-2K-XZk">
             <objects>
-                <viewController id="pt1-WJ-epY" customClass="TasksViewController" customModule="ToDoFIRE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pt1-WJ-epY" customClass="TasksViewController" customModule="ToDoFIRE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAM-fk-wlS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

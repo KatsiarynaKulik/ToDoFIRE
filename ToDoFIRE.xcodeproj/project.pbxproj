@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		C4D9579F2A532FF20022CCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9579E2A532FF20022CCEB /* AppDelegate.swift */; };
 		C4D957A12A532FF20022CCEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D957A02A532FF20022CCEB /* SceneDelegate.swift */; };
-		C4D957A32A532FF20022CCEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D957A22A532FF20022CCEB /* LoginViewController.swift */; };
 		C4D957A62A532FF20022CCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D957A42A532FF20022CCEB /* Main.storyboard */; };
 		C4D957A82A532FF40022CCEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D957A72A532FF40022CCEB /* Assets.xcassets */; };
 		C4D957AB2A532FF40022CCEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D957A92A532FF40022CCEB /* LaunchScreen.storyboard */; };
 		C4D957B32A53398E0022CCEB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D957B22A53398E0022CCEB /* TasksViewController.swift */; };
+		C4D958242A588D840022CCEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D958232A588D840022CCEB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C4D9579B2A532FF20022CCEB /* ToDoFIRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFIRE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D9579E2A532FF20022CCEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D957A02A532FF20022CCEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4D957A22A532FF20022CCEB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4D957A52A532FF20022CCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4D957A72A532FF40022CCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D957AA2A532FF40022CCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D957AC2A532FF40022CCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4D957B22A53398E0022CCEB /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		C4D958232A588D840022CCEB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		C4D957B42A5339D30022CCEB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4D957A22A532FF20022CCEB /* LoginViewController.swift */,
+				C4D958232A588D840022CCEB /* LoginViewController.swift */,
 				C4D957B22A53398E0022CCEB /* TasksViewController.swift */,
 			);
 			path = Controllers;
@@ -158,7 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D957A32A532FF20022CCEB /* LoginViewController.swift in Sources */,
+				C4D958242A588D840022CCEB /* LoginViewController.swift in Sources */,
 				C4D957B32A53398E0022CCEB /* TasksViewController.swift in Sources */,
 				C4D9579F2A532FF20022CCEB /* AppDelegate.swift in Sources */,
 				C4D957A12A532FF20022CCEB /* SceneDelegate.swift in Sources */,
@@ -323,9 +323,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Katsiaryna-Kulik.ToDoFIRE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -351,9 +354,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Katsiaryna-Kulik.ToDoFIRE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
