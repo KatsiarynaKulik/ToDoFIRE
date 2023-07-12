@@ -70,7 +70,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJn-eP-DgS"/>
-                                                    <segue destination="WId-Iq-Rr3" kind="show" identifier="tasksSegue" id="Nba-rB-A6B"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c51-Ku-9Os">
@@ -114,6 +113,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="dst-El-fsw" id="g36-9p-TwT"/>
                         <outlet property="passwordTextField" destination="hCx-pm-XI9" id="k6B-eC-WhY"/>
+                        <segue destination="WId-Iq-Rr3" kind="show" identifier="tasksSegue" id="A25-uQ-Kfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,6 +159,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="nKd-OV-V4S">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="n6I-wx-jaU">
+                            <connections>
+                                <action selector="signOutTapped:" destination="pt1-WJ-epY" id="Tj3-WO-ChR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mmd-yr-8Ks">
                             <connections>
                                 <action selector="addTapped:" destination="pt1-WJ-epY" id="aiQ-OH-YcX"/>
