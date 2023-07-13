@@ -30,7 +30,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
   
   @IBAction func signOutTapped(_ sender: UIBarButtonItem) {
     do {
-        try FIRAuth.auth()?.signOut()
+      try Auth.auth().signOut()
     } catch {
         print(error.localizedDescription)
     }
