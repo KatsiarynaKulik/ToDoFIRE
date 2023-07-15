@@ -113,6 +113,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="dst-El-fsw" id="g36-9p-TwT"/>
                         <outlet property="passwordTextField" destination="hCx-pm-XI9" id="k6B-eC-WhY"/>
+                        <outlet property="warnLabel" destination="gBc-K3-uqj" id="xeH-PG-Bjp"/>
                         <segue destination="WId-Iq-Rr3" kind="show" identifier="tasksSegue" id="A25-uQ-Kfj"/>
                     </connections>
                 </viewController>

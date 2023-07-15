@@ -11,6 +11,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+  let segueIdentifier = "tasksSegue"
+
   @IBOutlet weak var warnLabel: UILabel!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
@@ -21,21 +23,21 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
 
-        warnLabel.alpha = 0
+      warnLabel.alpha = 0
 
       Auth.auth().addStateDidChangeListener({ [weak self] (auth, user) in
-            if user != nil {
-                self?.performSegue(withIdentifier: (self?.restorationIdentifier)!, sender: nil)
-            }
-        })
-    }
+          if user != nil {
+              self?.performSegue(withIdentifier: (self?.segueIdentifier)!, sender: nil)
+          }
+      })
+  }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
 
-        emailTextField.text = ""
-        passwordTextField.text = ""
-    }
+      emailTextField.text = ""
+      passwordTextField.text = ""
+  }
 
   @objc func kbDidShow(notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
@@ -43,7 +45,6 @@ class LoginViewController: UIViewController {
 
         (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height + kbFrameSize.height)
         (self.view as! UIScrollView).scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbFrameSize.height, right: 0)
-
     }
 
   @objc func kbDidHide() {
@@ -76,7 +77,6 @@ class LoginViewController: UIViewController {
             self?.performSegue(withIdentifier: "tasksSegue", sender: nil)
             return
         }
-
         self?.displayWarningLabel(withText: "No such user")
     })
 }
@@ -86,9 +86,12 @@ class LoginViewController: UIViewController {
         displayWarningLabel(withText: "Info is incorrect")
         return
     }
+
     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+
         if error == nil {
             if user != nil {
+
             } else {
                 print("user is not created")
             }
