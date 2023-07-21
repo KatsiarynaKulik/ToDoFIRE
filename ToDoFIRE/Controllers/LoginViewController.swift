@@ -86,22 +86,23 @@ class LoginViewController: UIViewController {
     })
 }
 
+
   @IBAction func registerTapped(_ sender: UIButton) {
     guard let email = emailTextField.text, let password = passwordTextField.text, email != "", password != "" else {
         displayWarningLabel(withText: "Info is incorrect")
         return
     }
 
-    Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] (authResult, error) in
+    FIRAuth.auth().createUser(withEmail: email, password: password, completion: { [weak self] (user, error) in
 
-        guard error == nil, let user = authResult?.user else {
+        guard error == nil, user != nil else {
 
             print(error!.localizedDescription)
             return
         }
 
-        let userRef = self?.ref.child(user.uid)
-        userRef?.setValue(user.email, forKey: "email")
+        let userRef = self?.ref.child((user?.uid)!)
+        userRef?.setValue(["email": user?.email])
 
     })
 }
