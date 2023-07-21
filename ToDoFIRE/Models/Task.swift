@@ -30,6 +30,6 @@ struct Task {
     }
 
     func convertToDictionary() -> Any {
-        return ["title": title, "userId": userId, "completed": completed]
+      return ["title": title, "userId": userId, "completed": completed] as [String : Any]
     }
 }
